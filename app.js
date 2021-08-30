@@ -8,7 +8,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-    console.log('test');
+    let dateTime = new Date().toISOString;
+    console.log(`${dateTime}`);
     let content = "test"
     res.send(content)
 })
@@ -17,7 +18,8 @@ const jsonParser = express.json();
 
 // let arr = [];
 app.post("/test", jsonParser, (req, res) => {
-    console.log(req.body);
+    let dateTime = new Date().toISOString;
+    console.log(`${dateTime} + ${req.body}`);
     // console.log(JSON.stringify(req.body));
     let payload = req.body;
     // arr.push(payload);
