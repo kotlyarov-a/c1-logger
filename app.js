@@ -20,7 +20,7 @@ const jsonParser = express.json();
 // let arr = [];
 app.post("/test", jsonParser, (req, res) => {
     let dateTime = new Date().toISOString();
-    console.log(`${dateTime}    ${req.body}`);
+    console.log(`${dateTime}    ${JSON.stringify(req.body)}`);
     // console.log(JSON.stringify(req.body));
     let payload = req.body;
     // arr.push(payload);
